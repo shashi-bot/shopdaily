@@ -38,3 +38,30 @@ export const categories =[
         title:"Food Mart",
     },
 ];
+export const popularproducts= [{
+id:1,
+img:"https://d39vol41m7feya.cloudfront.net/1668259738-61DMPchFPLL._SL1500_.jpg",
+},
+{
+    id:2,
+    img:"https://d39vol41m7feya.cloudfront.net/1643554532-40210779_1-chings-secret-just-soak-whole-wheat-veg-hakka-noodles.jpg",
+},
+{
+    id:3,
+    img:"https://d39vol41m7feya.cloudfront.net/1663250237-dhara-life-refined-rice-bran-oil-5-l-product-images-o491389959-p590322104-3-202208221802.jpg",
+
+},
+{
+    id:4,
+    img:"https://d39vol41m7feya.cloudfront.net/1652707260-55162-500x500.jpeg",
+
+},
+{id:5,
+img:"https://d39vol41m7feya.cloudfront.net/1634539387-media_000000000000029837_1_Default-WF_Default-Zoom.jpeg",
+},
+{
+    id:6,
+    img:"https://d39vol41m7feya.cloudfront.net/1645536231-40130527-2_1-nivea-men-active-clean-shower-gel-with-active-charcoal-for-body-face-hair.jpg",
+},
+
+];
