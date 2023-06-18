@@ -1,5 +1,6 @@
 const router =require("express").Router();
 const User = require("../models/User");
+const CryptoJs = require("crypto-js");
 const {verifyToken,verifyTokenAndAuth, verifyTokenAndAdmin} = require("./verifyToken");
 router.put("/:id",verifyTokenAndAuth,async (req,res)=>{
     if(req.user.password){
@@ -47,7 +48,7 @@ router.get("/",verifyTokenAndAdmin, async (req,res)=>{
     }
 });
 //GET USER STATS
-router.get("/stats",verifyTokenAndAdmin, async (req,res)=>{
+router.get("/stats", async (req,res)=>{
     const date = new Date();
     const lastYear = new Date(date.setFullYear(date.getFullYear()-1));
     try{
@@ -64,7 +65,7 @@ router.get("/stats",verifyTokenAndAdmin, async (req,res)=>{
                 },
             },
         ]);
-        res.status(200).json(data);
+        res.status(200).send(data);
         
 
     }catch(err){

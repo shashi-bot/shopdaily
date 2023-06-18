@@ -1,14 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Kommunicate from '@kommunicate/kommunicate-chatbot-plugin';
+import { Provider } from 'react-redux';
+import {store} from './redux/store';
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import { PersistGate } from 'redux-persist/integration/react'
+import { loadUser } from './redux/userRedux';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-Kommunicate.init("3c620a0e0ebe58c04f641ca1f5eca25e8")
-
-
+store.dispatch(loadUser(null));
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+ 
+
+  <Provider store={store} >
+ <ToastContainer/>
+  
+    <App/>
+   
+  </Provider>,
+  
+
   document.getElementById('root')
 );

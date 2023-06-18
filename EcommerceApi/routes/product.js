@@ -1,15 +1,32 @@
 const router =require("express").Router();
 const Product = require("../models/Product");
 const User = require("../models/User");
+const cloudinary = require("../utils/cloudinary");
 const {verifyToken,verifyTokenAndAuth, verifyTokenAndAdmin} = require("./verifyToken");
 
 //create
-router.post("/",verifyTokenAndAdmin,async (req,res)=>{
-    const newProduct = new Product(req.body);
+router.post("/",verifyTokenAndAdmin, async (req,res)=>{
+     const {title,desc,img,categories,price,Recommendation,inStock} = req.body;
+     const newProduct = new Product({
+        title,
+        desc,
+        categories,
+        price,
+        Recommendation,
+        inStock,
+        img,
+    }
+
+    );
     try{
-       const savedProduct = await newProduct.save();
-       res.status(200).json(savedProduct);
-    }catch(err){
+      
+               const savedProduct = await newProduct.save();
+         res.status(200).json(savedProduct);
+                
+        }
+
+
+    catch(err){
         res.status(500).json(err);
     }
 })
@@ -42,7 +59,7 @@ router.get("/find/:id", async (req,res)=>{
  
     try{
       const product =  await Product.findById(req.params.id);
-      
+     
 
       res.status(200).json(product);
     }catch(err){

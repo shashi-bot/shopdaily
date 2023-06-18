@@ -26,15 +26,46 @@ export const categories =[
         id: 1,
         img:"https://www.dailyneeds.net/admin/category-banner/1593166819-1588960858-3.jpg",
         title:"FRUITS & Vegetables",
+        cat:"vegetables"
     },
     {
         id:2,
         img:"https://www.dailyneeds.net/admin/category-banner/1593167248-1588960890-4.jpg",
         title:"Breads,Dairy& Eggs",
+        cat:"dairy"
     },
     {
         id:3,
         img:"https://www.dailyneeds.net/admin/category-banner/1593168504-1588961194-14.jpg",
         title:"Food Mart",
+        cat:"food"
     },
+
+];
+export const popularproducts= [{
+id:1,
+img:"https://d39vol41m7feya.cloudfront.net/1668259738-61DMPchFPLL._SL1500_.jpg",
+},
+{
+    id:2,
+    img:"https://d39vol41m7feya.cloudfront.net/1643554532-40210779_1-chings-secret-just-soak-whole-wheat-veg-hakka-noodles.jpg",
+},
+{
+    id:3,
+    img:"https://d39vol41m7feya.cloudfront.net/1663250237-dhara-life-refined-rice-bran-oil-5-l-product-images-o491389959-p590322104-3-202208221802.jpg",
+
+},
+{
+    id:4,
+    img:"https://d39vol41m7feya.cloudfront.net/1652707260-55162-500x500.jpeg",
+
+},
+{id:5,
+img:"https://d39vol41m7feya.cloudfront.net/1634539387-media_000000000000029837_1_Default-WF_Default-Zoom.jpeg",
+},
+{
+    id:6,
+    img:"https://d39vol41m7feya.cloudfront.net/1645536231-40130527-2_1-nivea-men-active-clean-shower-gel-with-active-charcoal-for-body-face-hair.jpg",
+},
+
 ];
