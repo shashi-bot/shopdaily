@@ -3,7 +3,7 @@ const express = require("express");
 const router =require("express").Router();
 const stripe = require("stripe");
 const Order = require("../models/Order");
-const Stripe =stripe('sk_test_51LBJyPSDlKBwwSgepxKWQxoNQhdXI6tQZculLNo5u6BIMvb4u40y79TPJrN6pmrOEYoFAKOGtpCpynrFS1ltUJLn0044YpUukr');
+const Stripe =stripe('stripe key');
 
 router.post("/payment", async (req, res) => {
   const customer =await Stripe.customers.create({
