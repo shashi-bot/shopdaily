@@ -72,9 +72,9 @@ const Footer  = () => {
   return (
     <Container>
       <Left>
-        <Logo>RAHUL.</Logo>
+        <Logo>shopdaily</Logo>
         <Desc>
-           lucky is beautiful
+           shop now
         </Desc>
         <SocialContainer>
            <SocialIcon color="3B5999">
